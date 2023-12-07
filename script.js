@@ -161,7 +161,7 @@ function nextStation() {
   const currentIndex = stations.findIndex((station) => {
     return station.classList.contains("default-background-color");
   });
-  if (currentIndex < stations.length && currentIndex < 7) {
+  if (currentIndex < stations.length -1) {
     removeDefaultBackgroundColor(stations[currentIndex]);
     stations[currentIndex + 1].classList.add("default-background-color");
     const currentStation = stations[currentIndex + 1];
