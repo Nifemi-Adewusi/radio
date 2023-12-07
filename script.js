@@ -83,7 +83,7 @@ function changeStationImage(imgContainer, imgSource) {
 // }
 
 function checkBackgroundColor(stations) {
-  console.log("Hello");
+  // console.log("Hello");
   // Find the station that has the class default-background-color
   const result = stations.find((station) =>
     station.classList.contains("default-background-color")
@@ -161,7 +161,7 @@ function nextStation() {
   const currentIndex = stations.findIndex((station) => {
     return station.classList.contains("default-background-color");
   });
-  if (currentIndex < stations.length) {
+  if (currentIndex < stations.length && currentIndex < 7) {
     removeDefaultBackgroundColor(stations[currentIndex]);
     stations[currentIndex + 1].classList.add("default-background-color");
     const currentStation = stations[currentIndex + 1];
